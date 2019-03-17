@@ -20,7 +20,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::onFrameAvailable(qint64 ts, QImage frame)
 {
-    qDebug() << ts << frame.width();
+    qDebug() << ts << frame.size();
+    ui->lblImage->setPixmap(QPixmap::fromImage(frame));
 }
 
 void MainWindow::paintImage(QImage)
