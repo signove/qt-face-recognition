@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( FacialFeatures )
+find_package( OpenCV REQUIRED )
+add_executable( FacialFeatures facial_features.cpp )
+target_link_libraries( FacialFeatures ${OpenCV_LIBS} )
